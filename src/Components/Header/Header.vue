@@ -114,4 +114,11 @@ strong {
 .title-link {
   font-size: 18.5px;
 }
+
+@media screen and (max-width: 480px) {
+  .title-desktop {
+    font-size: 18.5px;
+    padding-right: 20px;
+  }
+}
 </style>

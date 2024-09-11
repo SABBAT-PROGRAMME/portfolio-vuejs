@@ -11,7 +11,8 @@ const text = [
 </script>
 
 <template>
-  <div class="card">
+  <!-- Desktop -->
+  <div class="card desktop">
     <div class="hero">
       <div class="heroContent">
         <h2 class="greeting">{{ text[0].name }}</h2>
@@ -28,6 +29,28 @@ const text = [
       </div>
       <div class="heroImageWrapper">
         <img src="../../../public//images/sabbat.png" className="heroImage" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile -->
+  <div class="card">
+    <div class="hero mobile">
+      <div class="heroContent">
+        <h2 class="greeting">{{ text[0].name }}</h2>
+        <div class="heroImageWrapper">
+          <img src="../../../public//images/sabbat.png" className="heroImage" />
+        </div>
+        <h1 class="title">
+          {{ text[0].title }}<br />
+          {{ text[0].subTitle }}
+        </h1>
+        <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
+          alt=""
+          class="decorativeImage"
+        />
       </div>
     </div>
   </div>
@@ -84,5 +107,45 @@ const text = [
 }
 img {
   border-radius: 13%;
+}
+
+.mobile {
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .heroContent {
+    align-items: center;
+  }
+  .title {
+    color: #a6bbcc;
+    font-size: 50px;
+    line-height: 116px;
+    font-weight: 900;
+    font-family: "Poppins", system-ui;
+    line-height: 1.2;
+  }
+  .heroImageWrapper {
+    width: 300px;
+  }
+  .greeting {
+    text-align: center;
+    line-height: 1.2;
+  }
+  img {
+    border-radius: 3%;
+    margin: 15px 0px 15px 0px;
+  }
 }
 </style>
