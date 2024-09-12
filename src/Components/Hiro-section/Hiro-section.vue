@@ -16,8 +16,23 @@
           class="decorativeImage"
         />
       </div>
-      <div class="heroImageWrapper">
-        <img src="../../../public//images/sabbat.png" className="heroImage" />
+      <div
+        class="heroImageWrapper"
+        @mouseover="showSecondImage"
+        @mouseleave="showFirstImage"
+      >
+        <img
+          v-if="isFirstImageVisible"
+          src="../../../public//images/sabbat.png"
+          alt="sabbat"
+          className="heroImage"
+        />
+        <img
+          v-else
+          src="../../../public/images/profile.png"
+          alt="sabbat"
+          className="heroImageHover"
+        />
       </div>
     </div>
   </div>
@@ -28,7 +43,18 @@
       <div class="heroContent">
         <h2 class="greeting">{{ text[0].name }}</h2>
         <div class="heroImageWrapper">
-          <img src="../../../public//images/sabbat.png" className="heroImage" />
+          <img
+            v-if="isFirstImageVisible"
+            src="../../../public//images/sabbat.png"
+            alt="sabbat"
+            className="heroImage"
+          />
+          <img
+            v-else
+            src="../../../public/images/profile.png"
+            alt="sabbat"
+            className="heroImageHover"
+          />
         </div>
         <h1 class="title">
           {{ text[0].title }}<br />
@@ -56,6 +82,14 @@ const text = [
     contact: "Contact me",
   },
 ];
+
+const isFirstImageVisible = ref(true);
+const showFirstImage = () => {
+  isFirstImageVisible.value = true;
+};
+const showSecondImage = () => {
+  isFirstImageVisible.value = false;
+};
 </script>
 
 <!-- style -->
@@ -107,6 +141,12 @@ const text = [
 .heroImageWrapper {
   width: 500px;
   border-radius: 13%;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImage {
+  /* position: absolute; */
 }
 img {
   border-radius: 13%;
