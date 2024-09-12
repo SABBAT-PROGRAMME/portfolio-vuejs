@@ -124,13 +124,35 @@ img {
   margin-top: 14px;
 }
 
-@media (max-width: 991px) {
-  .skills {
-    margin-top: 40px;
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
+  img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .description {
+    text-align: justify;
+    font-size: 3em;
+    width: 100%;
+  }
+}
 
-  .skillTitle {
-    font-size: 40px;
-  }
+.skills {
+  flex-direction: column;
+  align-items: center;
+}
+.skills h3 {
+  font-size: 36px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20px;
+  font-size: 0.5em;
 }
 </style>
