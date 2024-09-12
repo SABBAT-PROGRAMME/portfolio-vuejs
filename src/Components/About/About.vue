@@ -39,9 +39,9 @@ const skillsData = [
 <!-- style -->
 <style scoped>
 .about {
-  /* width: 100%;
+  width: 100%;
   max-width: 1237px;
-  margin: 0 auto; */
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -139,12 +139,13 @@ img {
     font-size: 3em;
     width: 100%;
   }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.skills {
-  flex-direction: column;
-  align-items: center;
-}
 .skills h3 {
   font-size: 36px;
 }
