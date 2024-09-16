@@ -174,6 +174,9 @@ img {
   img {
     border-radius: 0%;
   }
+  .heroImageWrapper {
+    border-radius: 1%;
+  }
   .title {
     color: #a6bbcc;
     font-size: 50px;

@@ -27,7 +27,10 @@
         /></a>
         <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
         <ul class="list-style-type: none; list-item">
-          J
+          <!-- <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>React</li> -->
           <li v-for="(item, index) in items" :key="index">
             {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
           </li>
@@ -42,9 +45,10 @@
         /></a>
         <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
         <ul class="list-style-type: none; list-item">
-          <li v-for="(item, index) in items" :key="index">
-            {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
-          </li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>React</li>
         </ul>
       </div>
     </div>
