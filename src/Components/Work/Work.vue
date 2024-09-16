@@ -27,10 +27,10 @@
         /></a>
         <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
         <ul class="list-style-type: none; list-item">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>React</li>
+          J
+          <li v-for="(item, index) in items" :key="index">
+            {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
+          </li>
         </ul>
       </div>
       <div class="portfolioItem">
@@ -42,10 +42,9 @@
         /></a>
         <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
         <ul class="list-style-type: none; list-item">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>React</li>
+          <li v-for="(item, index) in items" :key="index">
+            {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
+          </li>
         </ul>
       </div>
     </div>
@@ -54,7 +53,16 @@
 </template>
 
 <!-- script -->
-<script setup></script>
+<script setup>
+const items = [
+  {
+    html: "HTML",
+    css: "CSS",
+    js: "JS",
+    react: "REACT",
+  },
+];
+</script>
 
 <!-- style -->
 <style scoped>
@@ -129,29 +137,26 @@
 
 .list-item {
   display: flex;
-  /* justify-content: center; */
   gap: 20px;
   margin-top: 15px;
   margin-left: 25px;
   font: 700 20px/1 Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
-@media (max-width: 991px) {
-  .work {
-    margin-top: 40px;
-    padding: 0 20px;
+@media (max-width: 768px) {
+  .title-work {
+    flex-direction: column;
+    gap: 0;
   }
-
   .title {
+    text-align: center;
     font-size: 40px;
   }
-
-  .portfolioGrid {
-    flex-direction: column;
+  .description {
+    text-align: justify;
   }
-
-  .portfolioTitle {
-    margin-left: 10px;
+  .portfolioGrid {
+    flex-direction: column-reverse;
   }
 }
 </style>

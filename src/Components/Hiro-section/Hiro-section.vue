@@ -171,6 +171,9 @@ img {
   .heroContent {
     align-items: center;
   }
+  img {
+    border-radius: 0%;
+  }
   .title {
     color: #a6bbcc;
     font-size: 50px;
