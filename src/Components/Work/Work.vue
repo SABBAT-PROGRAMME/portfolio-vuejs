@@ -88,7 +88,6 @@ const items = [
   width: 100%;
   max-width: 1237px;
   margin: 0 auto;
-
   justify-content: center;
 }
 

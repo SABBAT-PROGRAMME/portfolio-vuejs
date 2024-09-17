@@ -6,6 +6,7 @@
     <HiroSection />
     <About />
     <Work />
+    <Contact />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Header from "./Header/Header.vue";
 import HiroSection from "./Hiro-section/Hiro-section.vue";
 import About from "./About/About.vue";
 import Work from "../Components/Work/Work.vue";
+import Contact from "../Components/Contact/Contact.vue";
 </script>
 
 <style scoped>
