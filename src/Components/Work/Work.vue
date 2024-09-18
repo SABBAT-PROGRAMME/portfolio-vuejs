@@ -31,10 +31,6 @@
         /></a>
         <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
         <ul class="list-style-type: none; list-item">
-          <!-- <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>React</li> -->
           <li v-for="(item, index) in items" :key="index">
             {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
           </li>
@@ -128,12 +124,22 @@ const items = [
   display: flex;
   gap: 20px;
   margin-top: 66px;
+  row-gap: 2rem;
 }
 
 .portfolioItem {
   flex: 1;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
+.portfolioItem img {
+  transition: 1s;
+}
+.portfolioItem img:hover {
+  transform: scale(1.1);
+}
 .portfolioImage {
   width: 100%;
   aspect-ratio: 1.8;
@@ -168,7 +174,7 @@ const items = [
     text-align: justify;
   }
   .portfolioGrid {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 </style>

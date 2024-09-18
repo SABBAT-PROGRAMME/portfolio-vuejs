@@ -23,18 +23,13 @@
         @mouseover="showSecondImage"
         @mouseleave="showFirstImage"
       >
-        <img
-          v-if="isFirstImageVisible"
-          :src="item.profile4"
-          alt="sabbat"
-          className="heroImage"
-        />
-        <img
+        <img :src="item.profile4" alt="sabbat" className="heroImage" />
+        <!-- <img
           v-else
           :src="item.profile3"
           alt="sabbat"
           className="heroImageHover"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -150,6 +145,13 @@ const showSecondImage = () => {
   border-radius: 13%;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+.heroImageWrapper img {
+  transition: 1s;
+}
+.heroImageWrapper img:hover {
+  transform: scale(1.1);
 }
 
 .heroImage {
