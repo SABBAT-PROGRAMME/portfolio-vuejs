@@ -9,27 +9,15 @@
         ><strong> Sabbat </strong> <span class="myName">Lumpatshia</span></span
       >
     </div>
-    <div className="socialLinks">
+    <div v-for="(item, index) in icones" :key="index" className="socialLinks">
       <a href="#" aria-label="GitHub profile">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7630a9f8a9935476612192ef1a23d48c0f7b3c723fa9bbc38040a71beeb5d38?apiKey=05e50562800e46f288f7d79b65b333f2&"
-          alt=""
-          className="socialIcon"
-        />
+        <img :src="item.facebook" alt="" className="socialIcon" />
       </a>
       <a href="#" aria-label="LinkedIn profile">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c27b90e3164ff915009ef22dfe758438e94156e3f2726a998b23be383474497?apiKey=05e50562800e46f288f7d79b65b333f2&"
-          alt=""
-          className="socialIcon"
-        />
+        <img :src="item.instagram" alt="" className="socialIcon" />
       </a>
       <a href="#" aria-label="Twitter profile">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/04d4bc0e77f04c0cc116b217468e792eabf54ab16547bda19f531e181b448d3a?apiKey=05e50562800e46f288f7d79b65b333f2&"
-          alt=""
-          className="socialIcon"
-        />
+        <img :src="item.github" alt="" className="socialIcon" />
       </a>
     </div>
   </footer>
@@ -38,6 +26,7 @@
 <!-- script -->
 <script setup>
 import { ref } from "vue";
+import { icones } from "../Data/Data";
 </script>
 
 <!-- style -->
