@@ -9,8 +9,8 @@ export const icones = [
 
 export const listImages = [
   {
-    profile1: "/images/portfolio1.png",
-    profile2: "/images/portfolio2.png",
+    portfolio1: "/images/portfolio1.png",
+    portfolio2: "/images/portfolio2.png",
     profile3: "/images/profile.png",
     profile4: "/images/sabbat.png",
   },

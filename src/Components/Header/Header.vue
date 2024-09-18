@@ -42,15 +42,11 @@
           </div>
         </div>
         <div
+          v-for="item in icones"
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
           <a href="https://github.com/Sabbat10" target="_blank">
-            <img
-              src="../../../public/icones/github.svg"
-              width="45"
-              height="40"
-              alt="icone-github"
-            />
+            <img :src="item.github" width="45" height="40" alt="icone-github" />
           </a>
         </div>
       </div>
@@ -80,6 +76,7 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { icones } from "../Data/Data";
 
 const navigation = [
   //   { name: "Sabbat Lumpatshia", href: "#", current: true },

@@ -17,19 +17,21 @@
         />
       </div>
       <div
+        v-for="item in listImages"
+        :key="item.key"
         class="heroImageWrapper"
         @mouseover="showSecondImage"
         @mouseleave="showFirstImage"
       >
         <img
           v-if="isFirstImageVisible"
-          src="../../../public//images/sabbat.png"
+          :src="item.profile4"
           alt="sabbat"
           className="heroImage"
         />
         <img
           v-else
-          src="../../../public/images/profile.png"
+          :src="item.profile3"
           alt="sabbat"
           className="heroImageHover"
         />
@@ -42,16 +44,20 @@
     <div class="hero mobile">
       <div class="heroContent">
         <h2 class="greeting">{{ text[0].name }}</h2>
-        <div class="heroImageWrapper">
+        <div
+          v-for="item in listImages"
+          :key="item.key"
+          class="heroImageWrapper"
+        >
           <img
             v-if="isFirstImageVisible"
-            src="../../../public//images/sabbat.png"
+            :src="item.profile4"
             alt="sabbat"
             className="heroImage"
           />
           <img
             v-else
-            src="../../../public/images/profile.png"
+            :src="item.profile3"
             alt="sabbat"
             className="heroImageHover"
           />
@@ -74,6 +80,7 @@
 <!-- script -->
 <script setup>
 import { ref } from "vue";
+import { listImages } from "../Data/Data";
 const text = [
   {
     name: "Hello I'm Sabbat Lumpatshia",

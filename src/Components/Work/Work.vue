@@ -18,10 +18,14 @@
     </div>
 
     <div class="portfolioGrid">
-      <div class="portfolioItem">
+      <div
+        v-for="(item, index) in listImages"
+        :key="index"
+        class="portfolioItem"
+      >
         <a href="#">
           <img
-            src="../../../public/images/portfolio1.png"
+            :src="item.portfolio2"
             alt="Design Portfolio"
             class="portfolioImage"
         /></a>
@@ -36,10 +40,14 @@
           </li>
         </ul>
       </div>
-      <div class="portfolioItem">
+      <div
+        v-for="(item, index) in listImages"
+        :key="index"
+        class="portfolioItem"
+      >
         <a href="#"
           ><img
-            src="../../../public/images/portfolio2.png"
+            :src="item.portfolio1"
             alt="Design Portfolio"
             class="portfolioImage"
         /></a>
@@ -58,6 +66,7 @@
 
 <!-- script -->
 <script setup>
+import { listImages } from "../Data/Data";
 const items = [
   {
     html: "HTML",
