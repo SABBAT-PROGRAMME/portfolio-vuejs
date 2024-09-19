@@ -13,16 +13,36 @@
       <p class="footer__copy">&#169; Sabbat Lumpatshia. Tous droits réservés</p>
     </div>
     <div v-for="(item, index) in icones" :key="index" className="socialLinks">
-      <a href="#" aria-label="GitHub profile">
+      <a
+        href="https://www.linkedin.com/in/sabbat-lumpatshia-665561207/"
+        aria-label="LinkedIn profile"
+        alt="sabbat-linkedin"
+        target="_blank"
+      >
         <img :src="item.linkedin" alt="" className="socialIcon" />
       </a>
-      <a href="#" aria-label="GitHub profile">
+      <a
+        href="https://www.facebook.com/sabbat.lumpathia?locale=fr_FR"
+        aria-label="facebook profile"
+        alt="facebook-profile"
+        target="_blank"
+      >
         <img :src="item.facebook" alt="" className="socialIcon" />
       </a>
-      <a href="#" aria-label="LinkedIn profile">
+      <a
+        href="https://www.instagram.com/sabbat_lumpatshia/"
+        aria-label="Instagram profile"
+        alt="sabbat-instagram"
+        target="_blank"
+      >
         <img :src="item.instagram" alt="" className="socialIcon" />
       </a>
-      <a href="#" aria-label="Twitter profile">
+      <a
+        href="https://github.com/Sabbat10"
+        aria-label="Github profile"
+        alt="sabbat-github"
+        target="_blank"
+      >
         <img :src="item.github" alt="" className="socialIcon" />
       </a>
     </div>
