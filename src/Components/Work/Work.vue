@@ -62,7 +62,7 @@
 
 <!-- script -->
 <script setup>
-import { listImages } from "../Data/Data";
+import { listImages } from "../../assets/Css/Data/Data";
 const items = [
   {
     html: "HTML",
@@ -75,6 +75,9 @@ const items = [
 
 <!-- style -->
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .work {
   width: 100%;
   max-width: 1238px;

@@ -38,6 +38,9 @@ const skillsData = [
 
 <!-- style -->
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .about {
   width: 100%;
   max-width: 1237px;

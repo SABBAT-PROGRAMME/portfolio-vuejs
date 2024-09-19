@@ -66,6 +66,9 @@ import { ref } from "vue";
 
 <!-- style -->
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .contact {
   width: 100%;
   max-width: 1238px;

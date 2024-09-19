@@ -9,7 +9,13 @@
         ><strong> Sabbat </strong> <span class="myName">Lumpatshia</span></span
       >
     </div>
+    <div>
+      <p class="footer__copy">&#169; Sabbat Lumpatshia. Tous droits réservés</p>
+    </div>
     <div v-for="(item, index) in icones" :key="index" className="socialLinks">
+      <a href="#" aria-label="GitHub profile">
+        <img :src="item.linkedin" alt="" className="socialIcon" />
+      </a>
       <a href="#" aria-label="GitHub profile">
         <img :src="item.facebook" alt="" className="socialIcon" />
       </a>
@@ -26,11 +32,14 @@
 <!-- script -->
 <script setup>
 import { ref } from "vue";
-import { icones } from "../Data/Data";
+import { icones } from "../../assets/Css/Data/Data";
 </script>
 
 <!-- style -->
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .footer {
   display: flex;
   justify-content: space-between;

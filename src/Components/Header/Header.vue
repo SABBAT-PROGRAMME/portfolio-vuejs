@@ -43,10 +43,18 @@
         </div>
         <div
           v-for="item in icones"
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 icone-github"
         >
           <a href="https://github.com/Sabbat10" target="_blank">
             <img :src="item.github" width="45" height="40" alt="icone-github" />
+          </a>
+        </div>
+        <div
+          v-for="item in icones"
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 icone-moon"
+        >
+          <a href="#" class="">
+            <img :src="item.moon" width="45" height="40" alt="icone-github" />
           </a>
         </div>
       </div>
@@ -76,17 +84,21 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { icones } from "../Data/Data";
+import { icones } from "../../assets/Css/Data/Data";
 
 const navigation = [
   //   { name: "Sabbat Lumpatshia", href: "#", current: true },
   { name: "Home", href: "#", current: false },
   { name: "About", href: "#", current: false },
   { name: "Work", href: "#", current: false },
+  { name: "Contact", href: "#", current: false },
 ];
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .header {
   padding: 12px;
 }
@@ -114,6 +126,12 @@ strong {
   .title-desktop {
     font-size: 18.5px;
     padding-right: 20px;
+  }
+  .icone-github {
+    display: none;
+  }
+  .icone-moon {
+    width: 40px;
   }
 }
 </style>
