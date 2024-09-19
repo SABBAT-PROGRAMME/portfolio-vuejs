@@ -54,7 +54,7 @@
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 icone-moon"
         >
           <a href="#" class="">
-            <img :src="item.moon" width="45" height="40" alt="icone-github" />
+            <img :src="item.moon" width="45" height="40" alt="icone-moon" />
           </a>
         </div>
       </div>
@@ -121,7 +121,26 @@ strong {
 .title-link {
   font-size: 18.5px;
 }
-
+.icone-github {
+  width: 40px;
+  overflow: hidden;
+}
+.icone-github a img {
+  transition: 1s;
+}
+.icone-github a img:hover {
+  transform: scale(1.2);
+}
+.icone-moon {
+  width: 40px;
+  overflow: hidden;
+}
+.icone-moon a img {
+  transition: 1s;
+}
+.icone-moon a img:hover {
+  transform: scale(1.2);
+}
 @media screen and (max-width: 480px) {
   .title-desktop {
     font-size: 18.5px;
@@ -132,6 +151,10 @@ strong {
   }
   .icone-moon {
     width: 40px;
+    overflow: hidden;
+  }
+  .icone-moon a img {
+    transition: 1s;
   }
 }
 </style>

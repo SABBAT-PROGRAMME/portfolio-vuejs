@@ -102,6 +102,17 @@ html {
   font: 400 24px/44px Poppins, -apple-system, Roboto, Helvetica, sans-serif;
   max-width: 900px;
 }
+.btn-submit {
+  overflow: hidden;
+}
+.btn-submit button {
+  transition: 1s;
+}
+.btn-submit button:hover {
+  border-color: #fff;
+  color: #a6bbcc;
+  background: #fff;
+}
 
 @media (max-width: 768px) {
   .title-contact {

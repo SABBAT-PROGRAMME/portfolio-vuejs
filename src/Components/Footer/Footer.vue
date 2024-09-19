@@ -1,9 +1,6 @@
 <!-- tamplete -->
 <template>
   <footer className="footer">
-    <!-- <h2 className="logo">
-      Sabbat<span className="logoLight">Lumpatshia</span>
-    </h2> -->
     <div class="flex title flex-shrink-0 items-center title-desktop">
       <span
         ><strong> Sabbat </strong> <span class="myName">Lumpatshia</span></span
@@ -87,6 +84,13 @@ html {
 .socialLinks {
   display: flex;
   gap: 17px;
+  overflow: hidden;
+}
+.socialLinks a img:hover {
+  transform: scale(1.2);
+}
+.socialLinks a img {
+  transition: 1s;
 }
 
 .socialIcon {
