@@ -1,75 +1,77 @@
 <!-- tamplete -->
 <template>
   <!-- Desktop -->
-  <div class="card desktop" id="hiro-section">
-    <div class="hero">
-      <div class="heroContent">
-        <h2 class="greeting">{{ text[0].name }}</h2>
-        <h1 class="title">
-          {{ text[0].title }}<br />
-          {{ text[0].subTitle }}
-        </h1>
-        <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
-          alt=""
-          class="decorativeImage"
-        />
-      </div>
-      <div
-        v-for="item in listImages"
-        :key="item.key"
-        class="heroImageWrapper"
-        @mouseover="showSecondImage"
-        @mouseleave="showFirstImage"
-      >
-        <img :src="item.profile4" alt="sabbat" className="heroImage" />
-        <!-- <img
+  <section id="hiro">
+    <div class="card desktop" id="hiro-section">
+      <div class="hero">
+        <div class="heroContent">
+          <h2 class="greeting">{{ text[0].name }}</h2>
+          <h1 class="title">
+            {{ text[0].title }}<br />
+            {{ text[0].subTitle }}
+          </h1>
+          <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
+            alt=""
+            class="decorativeImage"
+          />
+        </div>
+        <div
+          v-for="item in listImages"
+          :key="item.key"
+          class="heroImageWrapper"
+          @mouseover="showSecondImage"
+          @mouseleave="showFirstImage"
+        >
+          <img :src="item.profile4" alt="sabbat" className="heroImage" />
+          <!-- <img
           v-else
           :src="item.profile3"
           alt="sabbat"
           className="heroImageHover"
         /> -->
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile -->
-  <div class="card">
-    <div class="hero mobile">
-      <div class="heroContent">
-        <h2 class="greeting">{{ text[0].name }}</h2>
-        <div
-          v-for="item in listImages"
-          :key="item.key"
-          class="heroImageWrapper"
-        >
+    <!-- Mobile -->
+    <div class="card">
+      <div class="hero mobile">
+        <div class="heroContent">
+          <h2 class="greeting">{{ text[0].name }}</h2>
+          <div
+            v-for="item in listImages"
+            :key="item.key"
+            class="heroImageWrapper"
+          >
+            <img
+              v-if="isFirstImageVisible"
+              :src="item.profile4"
+              alt="sabbat"
+              className="heroImage"
+            />
+            <img
+              v-else
+              :src="item.profile3"
+              alt="sabbat"
+              className="heroImageHover"
+            />
+          </div>
+          <h1 class="title">
+            {{ text[0].title }}<br />
+            {{ text[0].subTitle }}
+          </h1>
+          <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
           <img
-            v-if="isFirstImageVisible"
-            :src="item.profile4"
-            alt="sabbat"
-            className="heroImage"
-          />
-          <img
-            v-else
-            :src="item.profile3"
-            alt="sabbat"
-            className="heroImageHover"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
+            alt=""
+            class="decorativeImage"
           />
         </div>
-        <h1 class="title">
-          {{ text[0].title }}<br />
-          {{ text[0].subTitle }}
-        </h1>
-        <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
-          alt=""
-          class="decorativeImage"
-        />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <!-- script -->

@@ -1,60 +1,63 @@
 <!-- tamplete -->
 <template>
-  <div class="contact" id="section-contact">
-    <div class="title-contact">
-      <div class="title"><h2>Contact</h2></div>
-      <div class="content">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8399dd158552add6a0df9eda0a80552af269a82ca42f72340631cc313b48a238?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
-          alt=""
-          class="decorativeImage"
-        />
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-          vulputate tristique quam felis. Id phasellus dui orci vulputate
-          consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.
-        </p>
+  <section id="contact">
+    <div class="contact" id="section-contact">
+      <div class="title-contact">
+        <div class="title"><h2>Contact</h2></div>
+        <div class="content">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8399dd158552add6a0df9eda0a80552af269a82ca42f72340631cc313b48a238?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
+            alt=""
+            class="decorativeImage"
+          />
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+            vulputate tristique quam felis. Id phasellus dui orci vulputate
+            consequat nulla proin. Id sit scelerisque neque, proin bibendum
+            diam.
+          </p>
+        </div>
       </div>
+      <!-- form -->
+      <form className="contactForm">
+        <div className="formGroup">
+          <label htmlFor="name" className="visuallyHidden">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="NAME"
+            required
+            className="formInput"
+          />
+        </div>
+        <div className="formGroup">
+          <label htmlFor="email" className="visuallyHidden">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="EMAIL"
+            required
+            className="formInput"
+          />
+        </div>
+        <div className="formGroup">
+          <label htmlFor="message" className="visuallyHidden">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="MESSAGE"
+            required
+            className="formTextarea"
+          ></textarea>
+        </div>
+        <div className="btn-submit">
+          <button type="submit" className="submitButton">SEND MESSAGE</button>
+        </div>
+      </form>
     </div>
-    <!-- form -->
-    <form className="contactForm">
-      <div className="formGroup">
-        <label htmlFor="name" className="visuallyHidden">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="NAME"
-          required
-          className="formInput"
-        />
-      </div>
-      <div className="formGroup">
-        <label htmlFor="email" className="visuallyHidden">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="EMAIL"
-          required
-          className="formInput"
-        />
-      </div>
-      <div className="formGroup">
-        <label htmlFor="message" className="visuallyHidden">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="MESSAGE"
-          required
-          className="formTextarea"
-        ></textarea>
-      </div>
-      <div className="btn-submit">
-        <button type="submit" className="submitButton">SEND MESSAGE</button>
-      </div>
-    </form>
-  </div>
+  </section>
 
   <!-- section -->
 </template>

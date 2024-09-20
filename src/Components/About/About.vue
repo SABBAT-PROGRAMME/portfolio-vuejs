@@ -1,30 +1,32 @@
 <!-- tamplete -->
 <template>
   <!-- About -->
-  <div class="about" id="section-about">
-    <h2 class="title">About</h2>
-    <div class="content">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/3892a4af946c81724f28289282891482f75f09fae7c15125817bbad1a0abd657?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
-        alt=""
-        className="decorativeImage"
-      />
-      <p className="description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate
-        tristique quam felis. Id phasellus dui orci vulputate consequat nulla
-        proin. Id sit scelerisque neque, proin bibendum diam.
-      </p>
+  <section id="about">
+    <div class="about" id="section-about">
+      <h2 class="title">About</h2>
+      <div class="content">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3892a4af946c81724f28289282891482f75f09fae7c15125817bbad1a0abd657?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
+          alt=""
+          className="decorativeImage"
+        />
+        <p className="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+          vulputate tristique quam felis. Id phasellus dui orci vulputate
+          consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <!-- skills -->
-  <div class="skills">
-    <div v-for="(skill, index) in skillsData" :key="index" class="skillItem">
-      <h3 class="skillTitle">{{ skill.title }}</h3>
-      <p class="skillExperience">{{ skill.experience }}</p>
-      <div class="skillBar"></div>
+    <!-- skills -->
+    <div class="skills">
+      <div v-for="(skill, index) in skillsData" :key="index" class="skillItem">
+        <h3 class="skillTitle">{{ skill.title }}</h3>
+        <p class="skillExperience">{{ skill.experience }}</p>
+        <div class="skillBar"></div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <!-- script -->

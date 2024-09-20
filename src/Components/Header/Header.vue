@@ -23,7 +23,7 @@
             >
           </div>
           <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 nav__menu">
               <a
                 class="title-link"
                 v-for="item in navigation"
