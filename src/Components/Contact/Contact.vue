@@ -1,6 +1,6 @@
 <!-- tamplete -->
 <template>
-  <div class="contact">
+  <div class="contact" id="section-contact">
     <div class="title-contact">
       <div class="title"><h2>Contact</h2></div>
       <div class="content">

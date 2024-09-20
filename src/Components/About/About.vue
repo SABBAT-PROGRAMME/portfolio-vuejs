@@ -1,7 +1,7 @@
 <!-- tamplete -->
 <template>
   <!-- About -->
-  <div class="about">
+  <div class="about" id="section-about">
     <h2 class="title">About</h2>
     <div class="content">
       <img

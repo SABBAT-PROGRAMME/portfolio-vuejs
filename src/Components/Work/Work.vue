@@ -1,6 +1,6 @@
 <!-- tamplete -->
 <template>
-  <div id="work" class="work">
+  <div class="work" id="section-work">
     <div class="title-work">
       <h2 class="title">Work</h2>
       <div class="content">

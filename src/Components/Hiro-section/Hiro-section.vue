@@ -1,7 +1,7 @@
 <!-- tamplete -->
 <template>
   <!-- Desktop -->
-  <div class="card desktop">
+  <div class="card desktop" id="hiro-section">
     <div class="hero">
       <div class="heroContent">
         <h2 class="greeting">{{ text[0].name }}</h2>

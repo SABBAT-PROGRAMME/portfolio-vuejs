@@ -54,9 +54,6 @@ import { icones } from "../../assets/Css/Data/Data";
 
 <!-- style -->
 <style scoped>
-html {
-  scroll-behavior: smooth;
-}
 .footer {
   display: flex;
   justify-content: space-between;

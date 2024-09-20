@@ -88,17 +88,24 @@ import { icones } from "../../assets/Css/Data/Data";
 
 const navigation = [
   //   { name: "Sabbat Lumpatshia", href: "#", current: true },
-  { name: "Home", href: "#", current: false },
-  { name: "About", href: "#", current: false },
-  { name: "Work", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Home", href: "#hiro-section", current: false, id: "hiro-section" },
+  {
+    name: "About",
+    href: "#section-about",
+    current: false,
+    id: "about-section",
+  },
+  { name: "Work", href: "#section-work", current: false, id: "work-section" },
+  {
+    name: "Contact",
+    href: "#section-contact",
+    current: false,
+    id: "contact-section",
+  },
 ];
 </script>
 
 <style scoped>
-html {
-  scroll-behavior: smooth;
-}
 .header {
   padding: 12px;
 }

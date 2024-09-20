@@ -23,6 +23,9 @@ import Footer from "./Footer/Footer.vue";
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 #layout {
   margin: ;
 }
