@@ -2,8 +2,11 @@
 <template>
   <footer className="footer">
     <div class="flex title flex-shrink-0 items-center title-desktop">
-      <span
-        ><strong> Sabbat </strong> <span class="myName">Lumpatshia</span></span
+      <a href="#nav"
+        ><span
+          ><strong> Sabbat </strong>
+          <span class="myName">Lumpatshia</span></span
+        ></a
       >
     </div>
     <div>
