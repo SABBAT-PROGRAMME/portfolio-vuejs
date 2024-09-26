@@ -11,9 +11,44 @@
           className="decorativeImage"
         />
         <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-          vulputate tristique quam felis. Id phasellus dui orci vulputate
-          consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.
+          👋 Hello, my name is <b>Sabbat Lumpatshia</b>, and I am a young
+          developer passionate about technology 💻. I recently completed a web
+          development training at
+          <a target="_blank" href="https://www.kadea.academy/"
+            ><b><u>Kadea Academy</u></b></a
+          >
+          🎓. <br />✨ During this training, I acquired solid skills in frontend
+          development
+          <b
+            >(<u
+              ><a
+                target="_blank"
+                href="https://developer.mozilla.org/fr/docs/Web/HTML"
+                >HTML</a
+              ></u
+            >,
+            <u
+              ><a href="https://developer.mozilla.org/fr/docs/Web/CSS"
+                >CSS</a
+              ></u
+            >,
+            <u
+              ><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript"
+                >JavaScript</a
+              ></u
+            >
+            )</b
+          >
+          🖥️ and backend development
+          <b
+            >( <u><a href="https://nodejs.org/docs/latest/api/">Node.js</a></u
+            >, <u><a href="https://docs.python.org/3/">Python</a></u> )</b
+          >
+          🛠️, allowing me to work on full stack projects 🌐. <br />🔍 I am
+          driven by continuous learning and love solving complex problems by
+          creating innovative solutions 🚀. I have already worked on several
+          personal projects 📝 and am currently looking for opportunities to
+          apply my skills in a professional environment 🌱.
         </p>
       </div>
     </div>
@@ -22,6 +57,12 @@
     <div class="skills">
       <div v-for="(skill, index) in skillsData" :key="index" class="skillItem">
         <h3 class="skillTitle">{{ skill.title }}</h3>
+        <ul class="steps steps-vertical">
+          <li class="step step-primary">{{ skill.zero }}</li>
+          <li class="step step-primary">{{ skill.un }}</li>
+          <li class="step step-secondary">{{ skill.deux }}</li>
+          <li class="step step-secondary">{{ skill.trois }}</li>
+        </ul>
         <p class="skillExperience">{{ skill.experience }}</p>
         <div class="skillBar"></div>
       </div>
@@ -31,10 +72,33 @@
 
 <!-- script -->
 <script setup>
+import vue from "@heroicons/vue";
+
 const skillsData = [
-  { title: "Front-End", experience: "60+ Hours Experience" },
-  { title: "Python", experience: "4 Years Experience" },
-  { title: "Machine Learning", experience: "120+ Hours Experience" },
+  {
+    title: "Front-End",
+    experience: "60+ Hours Experience",
+    zero: "Tailwind",
+    un: "Javascript",
+    deux: "Vue.js",
+    trois: "React",
+  },
+  {
+    title: "Back-End",
+    experience: "4 Years Experience",
+    zero: "Node.js",
+    un: "Python",
+    deux: "Django",
+    trois: "Database",
+  },
+  {
+    title: "Other Skills",
+    experience: "120+ Hours Experience",
+    zero: "Project management",
+    un: "Teamwork",
+    deux: "Problem solving",
+    trois: "Communication",
+  },
 ];
 </script>
 
