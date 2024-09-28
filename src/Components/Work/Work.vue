@@ -179,6 +179,8 @@ html {
   }
   .description {
     text-align: justify;
+    font-size: 1.3em;
+    line-height: 2;
   }
   .portfolioGrid {
     flex-direction: column;

@@ -11,7 +11,7 @@
           className="decorativeImage"
         />
         <p className="description">
-          👋 Hello, my name is <b>Sabbat Lumpatshia</b>, and I am a young
+          Hello 👋, my name is <b>Sabbat Lumpatshia</b>, and I am a young
           developer passionate about technology 💻. I recently completed a web
           development training at
           <a target="_blank" href="https://www.kadea.academy/"
@@ -92,7 +92,7 @@ const skillsData = [
     trois: "Database",
   },
   {
-    title: "Other Skills",
+    title: "Back-End",
     experience: "120+ Hours Experience",
     zero: "Project management",
     un: "Teamwork",
@@ -104,6 +104,10 @@ const skillsData = [
 
 <!-- style -->
 <style scoped>
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -205,7 +209,8 @@ img {
   }
   .description {
     text-align: justify;
-    font-size: 3em;
+    font-size: 2.3em;
+    line-height: 2;
     width: 100%;
   }
   .skills {

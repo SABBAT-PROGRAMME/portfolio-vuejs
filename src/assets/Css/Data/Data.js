@@ -6,6 +6,7 @@ export const icones = [
     instagram: "/icones/instagram.png",
     linkedin: "/icones/linkedin.png",
     moon: "/icones/moon.png",
+    email: "/icones/email.png",
   },
 ];
 

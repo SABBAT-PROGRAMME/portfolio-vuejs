@@ -10,12 +10,74 @@
             alt=""
             class="decorativeImage"
           />
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-            vulputate tristique quam felis. Id phasellus dui orci vulputate
-            consequat nulla proin. Id sit scelerisque neque, proin bibendum
-            diam.
-          </p>
+          <div v-for="item in icones" :key="item.key" class="description">
+            <ul class="timeline timeline-vertical">
+              <li>
+                <div class="timeline-start">Email</div>
+                <div class="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-end timeline-box">slmsabbat@gmail.com</div>
+                <hr />
+              </li>
+              <li>
+                <hr />
+                <div class="timeline-start">phone</div>
+                <div class="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-end timeline-box">+243 828 829 232</div>
+                <hr />
+              </li>
+              <li>
+                <hr />
+                <div class="timeline-start">address</div>
+                <div class="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-end timeline-box">
+                  Limeté, Kinshasa, RDC
+                </div>
+                <hr />
+              </li>
+              <li>
+                <hr />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- form -->
@@ -65,6 +127,7 @@
 <!-- script -->
 <script setup>
 import { ref } from "vue";
+import { icones } from "../../assets/Css/Data/Data";
 </script>
 
 <!-- style -->
@@ -100,11 +163,16 @@ html {
   padding-top: 60px;
   padding-bottom: 50px;
 }
+.container-icon {
+  display: flex;
+  align-items: center; /* Aligne l'image et le texte verticalement */
+}
 .description {
   color: #fff;
   font: 400 24px/44px Poppins, -apple-system, Roboto, Helvetica, sans-serif;
-  max-width: 900px;
+  max-width: 500px;
 }
+
 .btn-submit {
   overflow: hidden;
 }
@@ -215,5 +283,73 @@ button[type="submit"] {
   .submitButton::after {
     width: 180px;
   }
+}
+
+/* Style de la chronologie verticale */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timeline-start {
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.timeline-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.timeline-end {
+  background-color: #1f2937; /* Couleur du fond */
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.timeline-box {
+  background-color: #1f2937;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  color: #10b981; /* Change la couleur de l'icône */
+}
+
+.timeline li:last-child hr {
+  display: none;
 }
 </style>
