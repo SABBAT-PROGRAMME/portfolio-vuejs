@@ -81,43 +81,7 @@
         </div>
       </div>
       <!-- form -->
-      <form className="contactForm">
-        <div className="formGroup">
-          <label htmlFor="name" className="visuallyHidden">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="NAME"
-            required
-            className="formInput"
-          />
-        </div>
-        <div className="formGroup">
-          <label htmlFor="email" className="visuallyHidden">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="EMAIL"
-            required
-            className="formInput"
-          />
-        </div>
-        <div className="formGroup">
-          <label htmlFor="message" className="visuallyHidden">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="MESSAGE"
-            required
-            className="formTextarea"
-          ></textarea>
-        </div>
-        <div className="btn-submit">
-          <button type="submit" className="submitButton">SEND MESSAGE</button>
-        </div>
-      </form>
+      <Form />
     </div>
   </section>
 
@@ -128,6 +92,7 @@
 <script setup>
 import { ref } from "vue";
 import { icones } from "../../assets/Css/Data/Data";
+import Form from "./Form.vue";
 </script>
 
 <!-- style -->
