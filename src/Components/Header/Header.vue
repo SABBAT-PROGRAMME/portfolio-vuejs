@@ -154,12 +154,13 @@ strong {
     font-size: 18.5px;
     padding-right: 20px;
   }
-  .icone-github {
+  /* .icone-github {
     display: none;
-  }
+  } */
   .icone-moon {
     width: 40px;
     overflow: hidden;
+    display: none;
   }
   .icone-moon a img {
     transition: 1s;
