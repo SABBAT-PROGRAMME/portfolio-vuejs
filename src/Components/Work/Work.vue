@@ -11,10 +11,12 @@
             class="decorativeImage"
           />
           <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-            vulputate tristique quam felis. Id phasellus dui orci vulputate
-            consequat nulla proin. Id sit scelerisque neque, proin bibendum
-            diam.
+            I specialize in developing both frontend and backend solutions for
+            web applications. My passion lies in writing clean, modular code,
+            and I am always focused on delivering optimized and scalable
+            solutions. From simple landing pages to complex full-stack
+            applications, I prioritize user experience and seamless
+            functionality.
           </p>
         </div>
       </div>

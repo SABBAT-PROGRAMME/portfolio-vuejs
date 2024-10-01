@@ -38,9 +38,9 @@
     </div>
     <div className="btn-submit">
       <button type="submit" className="submitButton">SEND MESSAGE</button>
-      <p v-if="successMessage" class="success">{{ successMessage }}</p>
-      <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
     </div>
+    <p v-if="successMessage" class="success">{{ successMessage }}</p>
+    <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
   </form>
 </template>
 
@@ -72,7 +72,7 @@ const sendEmail = () => {
         from_email: form.value.email,
         message: form.value.message,
       },
-      "YOUR_USER_ID" // Remplacez par votre User ID EmailJS
+      "pfWCnYkUd3kJ9Etyi" // Remplacez par votre User ID EmailJS
     )
     .then(
       (response) => {
@@ -209,30 +209,17 @@ button[type="submit"] {
   border-radius: 5px;
 }
 
-/* .btn-submit {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} */
-/* 
-.btn-submit:hover {
-  background-color: #0056b3;
-} */
-
 .success {
   color: green;
   text-align: center;
   margin-top: 10px;
+  font-size: 1.5em;
 }
 
 .error {
   color: red;
   text-align: center;
   margin-top: 10px;
+  font-size: 1.5em;
 }
 </style>
