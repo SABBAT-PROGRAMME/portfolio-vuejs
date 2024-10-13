@@ -60,8 +60,8 @@
         <ul class="steps steps-vertical">
           <li class="step step-primary">{{ skill.zero }}</li>
           <li class="step step-primary">{{ skill.un }}</li>
-          <li class="step step-secondary">{{ skill.deux }}</li>
-          <li class="step step-secondary">{{ skill.trois }}</li>
+          <li class="step step-success">{{ skill.deux }}</li>
+          <li class="step step-success">{{ skill.trois }}</li>
         </ul>
         <p class="skillExperience">{{ skill.experience }}</p>
         <div class="skillBar"></div>
@@ -92,7 +92,7 @@ const skillsData = [
     trois: "Database",
   },
   {
-    title: "Back-End",
+    title: "Other skills",
     experience: "120+ Hours Experience",
     zero: "Project management",
     un: "Teamwork",
