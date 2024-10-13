@@ -4,13 +4,13 @@
   <section id="hiro">
     <div class="card desktop" id="hiro-section">
       <div class="hero">
-        <div class="heroContent">
-          <h2 class="greeting">{{ text[0].name }}</h2>
+        <div v-for="item in text" class="heroContent">
+          <h2 class="greeting">{{ item.name }}</h2>
           <h1 class="title">
-            {{ text[0].title }}<br />
-            {{ text[0].subTitle }}
+            {{ item.title }}<br />
+            {{ item.subTitle }}
           </h1>
-          <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
+          <a href="#contact" class="contactButton">{{ item.contact }}</a>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
             alt=""
@@ -24,13 +24,11 @@
           @mouseover="showSecondImage"
           @mouseleave="showFirstImage"
         >
-          <img :src="item.profile4" alt="sabbat" className="heroImage" />
-          <!-- <img
-          v-else
-          :src="item.profile3"
-          alt="sabbat"
-          className="heroImageHover"
-        /> -->
+          <img
+            :src="item.profile4"
+            alt="sabbat-profile"
+            className="heroImage"
+          />
         </div>
       </div>
     </div>
@@ -38,8 +36,8 @@
     <!-- Mobile -->
     <div class="card">
       <div class="hero mobile">
-        <div class="heroContent">
-          <h2 class="greeting">{{ text[0].name }}</h2>
+        <div v-for="item in text" class="heroContent">
+          <h2 class="greeting">{{ item.name }}</h2>
           <div
             v-for="item in listImages"
             :key="item.key"
@@ -59,10 +57,10 @@
             />
           </div>
           <h1 class="title">
-            {{ text[0].title }}<br />
-            {{ text[0].subTitle }}
+            {{ item.title }}<br />
+            {{ item.subTitle }}
           </h1>
-          <a href="#contact" class="contactButton">{{ text[0].contact }}</a>
+          <a href="#contact" class="contactButton">{{ item.contact }}</a>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b2696c4afe8a807e21e0d063c6b116dfe5122a64dc8d1b58863aeb7ec5e3c08?placeholderIfAbsent=true&apiKey=05e50562800e46f288f7d79b65b333f2"
             alt=""
@@ -76,8 +74,11 @@
 
 <!-- script -->
 <script setup>
+// import
 import { ref } from "vue";
 import { listImages } from "../../assets/Css/Data/Data";
+
+// data
 const text = [
   {
     name: "Hello I'm Sabbat Lumpatshia",
@@ -87,10 +88,15 @@ const text = [
   },
 ];
 
+// variables
 const isFirstImageVisible = ref(true);
+
+// functions
 const showFirstImage = () => {
   isFirstImageVisible.value = true;
 };
+
+// functions
 const showSecondImage = () => {
   isFirstImageVisible.value = false;
 };
@@ -160,9 +166,6 @@ html {
   transform: scale(1.1);
 }
 
-.heroImage {
-  /* position: absolute; */
-}
 img {
   border-radius: 13%;
 }

@@ -13,9 +13,9 @@
 </template>
 
 <!-- script -->
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
 
 import Header from "./Header/Header.vue";
 import HiroSection from "./Hiro-section/Hiro-section.vue";
@@ -23,16 +23,6 @@ import About from "./About/About.vue";
 import Work from "../Components/Work/Work.vue";
 import Contact from "../Components/Contact/Contact.vue";
 import Footer from "./Footer/Footer.vue";
-
-// const routes = createRouter({
-//   history: createWebHistory(),
-//   routes: [
-//     { path: "/", component: HiroSection },
-//     { path: "/about", component: About },
-//     { path: "/work", component: Work },
-//     { path: "/contact", component: Contact },
-//   ],
-// });
 
 const sections = ref([]);
 function scrollActive() {
@@ -67,8 +57,5 @@ onBeforeUnmount(() => {
 <style scoped>
 html {
   scroll-behavior: smooth;
-}
-#layout {
-  margin: ;
 }
 </style>

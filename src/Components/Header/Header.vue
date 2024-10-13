@@ -5,7 +5,7 @@
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           >
             <span class="absolute -inset-0.5" />
             <span class="sr-only">Open main menu</span>
@@ -13,6 +13,7 @@
             <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
           </DisclosureButton>
         </div>
+        <!-- Name or title -->
         <div
           id="nav"
           class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
@@ -23,6 +24,7 @@
               <span class="myName">Lumpatshia</span></span
             >
           </div>
+          <!-- Navigation Links -->
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4 nav__menu">
               <a
@@ -42,6 +44,7 @@
             </div>
           </div>
         </div>
+        <!-- Icons -->
         <div
           v-for="item in icones"
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 icone-github"
@@ -61,6 +64,7 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
     <DisclosurePanel class="sm:hidden">
       <div class="space-y-1 px-2 pb-3 pt-2 title-mobile">
         <DisclosureButton
@@ -83,10 +87,12 @@
 </template>
 
 <script setup>
+// import
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { icones } from "../../assets/Css/Data/Data";
 
+// data
 const navigation = [
   //   { name: "Sabbat Lumpatshia", href: "#", current: true },
   { name: "Home", href: "#hiro-section", current: false, id: "hiro-section" },
@@ -106,6 +112,7 @@ const navigation = [
 ];
 </script>
 
+<!-- style -->
 <style scoped>
 .header {
   padding: 12px;
@@ -154,9 +161,6 @@ strong {
     font-size: 18.5px;
     padding-right: 20px;
   }
-  /* .icone-github {
-    display: none;
-  } */
   .icone-moon {
     width: 40px;
     overflow: hidden;
