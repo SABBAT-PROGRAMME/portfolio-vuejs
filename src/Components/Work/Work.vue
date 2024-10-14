@@ -30,14 +30,18 @@
           <a href="https://sabbat10.github.io/portfolio_sabbat_Lumpatshia/">
             <img
               :src="item.portfolio2"
-              alt="Design Portfolio"
+              alt="Design Portfolio-1"
               class="portfolioImage"
           /></a>
           <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
-          <ul class="list-style-type: none; list-item">
-            <li v-for="(item, index) in items" :key="index">
-              {{ item.html }} {{ item.css }} {{ item.js }} {{ item.react }}
-            </li>
+          <ul
+            v-for="(item, index) in items"
+            class="list-style-type: none; list-item"
+          >
+            <li>{{ item.html }}</li>
+            <li>{{ item.css }}</li>
+            <li>{{ item.js }}</li>
+            <li>{{ item.react }}</li>
           </ul>
         </div>
         <div
@@ -49,15 +53,18 @@
             href="https://sabbat10.github.io/portfolio_sabbat_Lumpatshia/#about"
             ><img
               :src="item.portfolio1"
-              alt="Design Portfolio"
+              alt="Design Portfolio-2"
               class="portfolioImage"
           /></a>
           <h3 class="portfolioTitle">DESIGN PORTFOLIO</h3>
-          <ul class="list-style-type: none; list-item">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>React</li>
+          <ul
+            v-for="(item, index) in items"
+            class="list-style-type: none; list-item"
+          >
+            <li>{{ item.html }}</li>
+            <li>{{ item.css }}</li>
+            <li>{{ item.js }}</li>
+            <li>{{ item.react }}</li>
           </ul>
         </div>
       </div>
