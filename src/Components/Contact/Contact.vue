@@ -11,9 +11,12 @@
             class="decorativeImage"
           />
           <div v-for="item in icones" :key="item.key" class="description">
-            <ul class="timeline timeline-vertical">
+            <ul
+              v-for="(data, index) in data"
+              class="timeline timeline-vertical"
+            >
               <li>
-                <div class="timeline-start">Email</div>
+                <div class="timeline-start">{{ data.emailtitle }}</div>
                 <div class="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +31,12 @@
                     />
                   </svg>
                 </div>
-                <div class="timeline-end timeline-box">slmsabbat@gmail.com</div>
+                <div class="timeline-end timeline-box">{{ data.email }}</div>
                 <hr />
               </li>
               <li>
                 <hr />
-                <div class="timeline-start">phone</div>
+                <div class="timeline-start">{{ data.phonetitle }}</div>
                 <div class="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -48,12 +51,12 @@
                     />
                   </svg>
                 </div>
-                <div class="timeline-end timeline-box">+243 828 829 232</div>
+                <div class="timeline-end timeline-box">{{ data.phone }}</div>
                 <hr />
               </li>
               <li>
                 <hr />
-                <div class="timeline-start">address</div>
+                <div class="timeline-start">{{ data.addresstitle }}</div>
                 <div class="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@
                   </svg>
                 </div>
                 <div class="timeline-end timeline-box">
-                  Limeté, Kinshasa, RDC
+                  {{ data.address }}
                 </div>
                 <hr />
               </li>
@@ -93,6 +96,17 @@
 import { ref } from "vue";
 import { icones } from "../../assets/Css/Data/Data";
 import Form from "./Form.vue";
+
+const data = [
+  {
+    emailtitle: "Email",
+    email: "slmsabbat@gmail",
+    phonetitle: "Phone",
+    phone: "+243 828 829 232",
+    addresstitle: "Address",
+    address: "Limeté, Kinshasa, RDC",
+  },
+];
 </script>
 
 <!-- style -->

@@ -65,14 +65,14 @@ const errorMessage = ref("");
 const sendEmail = () => {
   emailjs
     .send(
-      "sabbat_service", // Remplacez par votre Service ID EmailJS * service_r4ewqzc
-      "template_kt0r0j1", // Remplacez par votre Template ID EmailJS
+      "sabbat_service", //  Service ID EmailJS * service_r4ewqzc
+      "template_kt0r0j1", // Template ID EmailJS
       {
         from_name: form.value.name,
         from_email: form.value.email,
         message: form.value.message,
       },
-      "pfWCnYkUd3kJ9Etyi" // Remplacez par votre User ID EmailJS
+      "pfWCnYkUd3kJ9Etyi" // User ID EmailJS
     )
     .then(
       (response) => {
