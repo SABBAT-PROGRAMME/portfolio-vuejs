@@ -19,7 +19,11 @@
         alt="sabbat-linkedin"
         target="_blank"
       >
-        <img :src="item.linkedin" alt="" className="socialIcon" />
+        <img
+          :src="item.linkedin"
+          alt="sabbat-linkedin"
+          className="socialIcon"
+        />
       </a>
       <a
         href="https://www.facebook.com/sabbat.lumpathia?locale=fr_FR"
@@ -27,7 +31,11 @@
         alt="facebook-profile"
         target="_blank"
       >
-        <img :src="item.facebook" alt="" className="socialIcon" />
+        <img
+          :src="item.facebook"
+          alt="facebook-profile"
+          className="socialIcon"
+        />
       </a>
       <a
         href="https://www.instagram.com/sabbat_lumpatshia/"
@@ -35,7 +43,11 @@
         alt="sabbat-instagram"
         target="_blank"
       >
-        <img :src="item.instagram" alt="" className="socialIcon" />
+        <img
+          :src="item.instagram"
+          alt="sabbat-instagram"
+          className="socialIcon"
+        />
       </a>
       <a
         href="https://github.com/Sabbat10"
@@ -43,7 +55,7 @@
         alt="sabbat-github"
         target="_blank"
       >
-        <img :src="item.github" alt="" className="socialIcon" />
+        <img :src="item.github" alt="sabbat-github" className="socialIcon" />
       </a>
     </div>
   </footer>
